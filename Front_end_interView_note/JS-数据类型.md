@@ -41,7 +41,7 @@ console.log(typeof arr) // object
 console.log(typeof zs)  // object
 ```
 
-![](E:\Learn\note\剑指offer\img\2022-09-21-10-50-57-image.png)
+![](E:\Learn\note\software_test_note\software_test_img\d70985cddf4a058420cec8e95656f625b9cc41bf.png)
 
 2、Infinity 和 NaN 识别为 number。
 
@@ -52,7 +52,7 @@ console.log(typeof a) // number
 console.log(typeof b) // number
 ```
 
-![](E:\Learn\note\剑指offer\img\2022-09-21-10-53-25-image.png)
+![](E:\Learn\note\software_test_note\software_test_img\6808c612b150b31d58f402b53ac95230b4951493.png)
 
 3、识别所有值类型，识别函数类型
 
@@ -69,7 +69,7 @@ console.log(typeof d) //symbol
 console.log(typeof foo) // function
 ```
 
-![](E:\Learn\note\剑指offer\img\2022-09-21-10-59-36-image.png)
+![](E:\Learn\note\software_test_note\software_test_img\a940f6f29eafa4fde6e9a822b33b94809e9cba95.png)
 
 （二）instanceof  ——  检测 null 和undefined 返回  undefined
 
