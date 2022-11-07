@@ -1,4 +1,4 @@
-一、数据类型（8种）
+### 一、数据类型（8种）
 
 Number, String，Boolean，NULL，Undefined，Object{arrary，function}，Bigint，Symbol
 
@@ -12,13 +12,13 @@ Number, String，Boolean，NULL，Undefined，Object{arrary，function}，Bigint
 
 （2）function：不用于鵆，所以没有赋值，拷贝函数一说。
 
-二、引用数据类型和值类型
+### 二、引用数据类型和值类型
 
 1、值类型变量：保存在**栈内存**中，属于深赋值。无法添加属性和方法
 
 2、引用类型变量：变量名保存在**栈内存**，变量值保存在**堆内存**。不引用时，系统垃圾回收机制回收。属于浅赋值。可以添加属性和方法
 
-三、虚值和真值
+### 三、虚值和真值
 
 1、虚值（Falsy）：转换为Boolean值为false。真值（Truthy）：转换为Boolean值为true
 
@@ -26,7 +26,7 @@ Number, String，Boolean，NULL，Undefined，Object{arrary，function}，Bigint
 
 真值：空数组，空对象，其他
 
-四、JS数据类型判断
+### 四、JS数据类型判断
 
 （一）typeof ——  无法区分对象、数组以及null
 

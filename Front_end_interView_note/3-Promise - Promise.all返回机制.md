@@ -1,3 +1,5 @@
+# Promise
+
 一、resolve 和 reject
 
 1、执行了 resolve ， Promise状态会变成 fulfilled
