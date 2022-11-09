@@ -29,16 +29,16 @@
 ```javascript
 // 定义一个动物类
 function Animal (name) {
-// 属性
-this.name = name || 'Animal';
-// 实例方法
-this.sleep = function(){
-console.log(this.name + '正在睡觉！');
-}
+	// 属性
+	this.name = name || 'Animal';
+	// 实例方法
+    this.sleep = function(){
+        console.log(this.name + '正在睡觉！');
+    }
 }
 // 原型方法
 Animal.prototype.eat = function(food) {
-console.log(this.name + '正在吃：' + food);
+	console.log(this.name + '正在吃：' + food);
 };
 ```
 
@@ -48,15 +48,15 @@ console.log(this.name + '正在吃：' + food);
 
 ```javascript
 function Cat(){ }
-Cat.prototype = new Animal();
-Cat.prototype.name = 'cat';
+    Cat.prototype = new Animal();
+    Cat.prototype.name = 'cat';
 // Test Code
-var cat = new Cat();
-console.log(cat.name);
-console.log(cat.eat('fish'));
-console.log(cat.sleep());
-console.log(cat instanceof Animal); //true
-console.log(cat instanceof Cat); //true
+    var cat = new Cat();
+    console.log(cat.name);
+    console.log(cat.eat('fish'));
+    console.log(cat.sleep());
+    console.log(cat instanceof Animal); //true
+    console.log(cat instanceof Cat); //true
 ```
 
 介绍：在这里我们可以看到 new 了一个空对象,这个空对象指向 Animal 并且 Cat.prototype 指向了这个空对象，这种就是基于原型链的继承。 
@@ -69,8 +69,8 @@ console.log(cat instanceof Cat); //true
 
 ```javascript
 function Cat(name){
-Animal.call(this);
-this.name = name || 'Tom';
+    Animal.call(this);
+    this.name = name || 'Tom';
 }
 // Test Code
 var cat = new Cat();
@@ -90,8 +90,8 @@ console.log(cat instanceof Cat); // true
 
 ```javascript
 function Cat(name){
-Animal.call(this);
-this.name = name || 'Tom';
+    Animal.call(this);
+    this.name = name || 'Tom';
 }
 Cat.prototype = new Animal();
 Cat.prototype.constructor = Cat;
@@ -111,15 +111,15 @@ console.log(cat instanceof Cat); // true
 
 ```javascript
 function Cat(name){
-Animal.call(this);
-this.name = name || 'Tom';
+    Animal.call(this);
+    this.name = name || 'Tom';
 }
 (function(){
-// 创建一个没有实例方法的类
-var Super = function(){};
-Super.prototype = Animal.prototype;
-//将实例作为子类的原型
-Cat.prototype = new Super();
+	// 创建一个没有实例方法的类
+    var Super = function(){};
+    Super.prototype = Animal.prototype;
+    //将实例作为子类的原型
+    Cat.prototype = new Super();
 })();
 // Test Code
 var cat = new Cat();
@@ -128,6 +128,8 @@ console.log(cat.sleep());
 console.log(cat instanceof Animal); // true
 console.log(cat instanceof Cat); //true
 ```
+
+
 
 ### 5、如何解决异步回调地狱 
 
@@ -165,13 +167,17 @@ addEventListener：addEventListener 是 DOM2 级事件新增的指定事件处�
 
 ### 9、说一下图片的懒加载和预加载 
 
-1、预加载和懒加载
+##### 1、预加载和懒加载
 
 **预加载**：**提前加载图片，**当用户需要查看时可直接从**本地缓存中渲染**。
 
 **懒加载**：懒加载的主要目的是作为服务器前端的优化，减少请求数或延迟请求数。
 
 两种技术的本质：两者的行为是相反的，一个是提前加载，一个是迟缓甚至不加载。 **懒加载对服务器前端有一定的缓解压力作用**，预加载则会增加服务器前端压力。
+
+#### 问题2：什么是按需加载 
+
+答：当用户触发了动作时才加载对应的功能。触发的动作，是要看具体的业务场景而言， 包括但不限于以下几个情况：鼠标点击、输入文字、拉动滚动条，鼠标移动、窗口大 小更改等。加载的文件，可以是 JS、图片、CSS、HTML 等。
 
 ### 10、mouseover 和 mouseenter 的区别
 
